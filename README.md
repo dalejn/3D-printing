@@ -22,13 +22,8 @@
 2. convert to nifti: <br />
 	 mri_convert lh.hippo.3dprint.mgz lh.hippo.3dprint.nii.gz
 
-3. set threshold range to the label number (210 for granule cell layer of the dentate gyrus): <br />
-     fslmaths lh.hippo.3dprint.nii.gz -uthr 210 -thr 210 lh.hippo.gcdg.nii.gz
-
-4. divide mask file by label number so all values are binary 0s or 1s
-some imaging programs don't work well with binary masks with values other
-than 0s or 1s: <br />
-      fslmaths lh.hippo.gcdg.nii.gz -div 210 lh.hippo.gcdg.nii.gz
+3. set threshold range to the label number (210 for granule cell layer of the dentate gyrus) and binarize mask: <br />
+     fslmaths lh.hippo.3dprint.nii.gz -uthr 210 -thr 210 -bin lh.hippo.gcdg.nii.gz
 
 #-----------------------------------------------
 
