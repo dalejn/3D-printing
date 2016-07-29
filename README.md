@@ -1,33 +1,33 @@
 #CONVERTING VOLUMES TO STL
 
-1. unzip 
+1. unzip <br />
        gunzip rh.hippoSfLabels-T1.v10.nii.gz 
 
-2. binarize the volume
+2. binarize the volume: <br />
 	  fslmaths rh.hippoSfLabels-T1.v10.nii -bin rh.hippo_bin.nii
 
-3. create tessellated surface of binarized volume
+3. create tessellated surface of binarized volume: <br />
 	mri_tessellate rh.hippo_bin.nii.gz 1 rh.hippo
 
-4. convert binary surface to stl format
+4. convert binary surface to stl format: <br />
 	 mris_convert rh.hippo rh.hippo.stl
 
 #-----------------------------------------------
 
 #EXTRACTING A LABELED REGION
 
-1. create temp file
+1. create temp file: <br />
 	cp lh.hippoSfLabels-T1.v10.mgz lh.hippo.3dprint.mgz
 
-2. convert to nifti
+2. convert to nifti: <br />
 	 mri_convert lh.hippo.3dprint.mgz lh.hippo.3dprint.nii.gz
 
-3. set threshold range to the label number (210 for granule cell layer of the dentate gyrus)
+3. set threshold range to the label number (210 for granule cell layer of the dentate gyrus): <br />
      fslmaths lh.hippo.3dprint.nii.gz -uthr 210 -thr 210 lh.hippo.gcdg.nii.gz
 
 4. divide mask file by label number so all values are binary 0s or 1s
 some imaging programs don't work well with binary masks with values other
-than 0s or 1s
+than 0s or 1s: <br />
       fslmaths lh.hippo.gcdg.nii.gz -div 210 lh.hippo.gcdg.nii.gz
 
 #-----------------------------------------------
@@ -36,7 +36,7 @@ than 0s or 1s
 
 Meshlab (free)
 
-1. Smoothing
+1. Smoothing <br />
 Filters > Smoothing, Fairing, and Deformation > Laplacian Smooth
 
 2. Export Mesh as .stl
