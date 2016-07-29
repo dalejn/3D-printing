@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #CONVERTING VOLUMES TO STL
 
 1. unzip 
@@ -54,7 +53,16 @@ press F5
 6. Click Apply Repair and select Remove Old Part
 7. Check the status of the mesh again by pressing F5 or clicking Platform 
 Overview
-=======
-# 3D-printing
-3D printing the brain, hippocampus, and hippocampal subregions with magnetic connectors using freesurfer and Meshlab
->>>>>>> d91ae610c71fb9147e8ce5556bbf9f8e79764e11
+
+#-----------------------------------------------
+
+#PRINTING/CHANGING SETTINGS  W/ MAKERBOT
+
+Models with angles >45 degrees need support -- can't print on air. Rafts 
+are platforms the object is printed on that improves adhesion to the build
+plate. 
+
+1. Open .stl file with Makerbot Desktop software
+2. If object is large with heavy overhangs, set Support Density to 0.20 and
+select Extra Support. 
+3. Export .stl to .x3g file to a  2 gb or smaller SD card
