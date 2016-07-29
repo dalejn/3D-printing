@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #CONVERTING VOLUMES TO STL
 
 1. unzip 
@@ -53,3 +54,7 @@ press F5
 6. Click Apply Repair and select Remove Old Part
 7. Check the status of the mesh again by pressing F5 or clicking Platform 
 Overview
+=======
+# 3D-printing
+3D printing the brain, hippocampus, and hippocampal subregions with magnetic connectors using freesurfer and Meshlab
+>>>>>>> d91ae610c71fb9147e8ce5556bbf9f8e79764e11
