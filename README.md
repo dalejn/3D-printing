@@ -49,9 +49,9 @@ Filters > Smoothing, Fairing, and Deformation > Laplacian Smooth
 ####2. If status says "valid mesh" then it's ready to print. If status says "incorrect mesh" then continue
 ####3. Click the Repair button (red cross)
 ####4. Click automatic repair at the bottom right
-###5. Select Default repair and click Execute
-###6. Click Apply Repair and select Remove Old Part
-###7. Check the status of the mesh again by pressing F5 or clicking Platform Overview
+####5. Select Default repair and click Execute
+####6. Click Apply Repair and select Remove Old Part
+####7. Check the status of the mesh again by pressing F5 or clicking Platform Overview
 
 -----------------------------------------------
 
